@@ -3,7 +3,7 @@ import math
 
 DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 LOWER_RANGE_LIMIT = 1
-UPPER_RANGE_LIMIT = 20
+UPPER_RANGE_LIMIT = 50
 
 
 def get_game_data():

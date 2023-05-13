@@ -2,9 +2,9 @@ from random import randint
 
 DESCRIPTION = 'What number is missing in the progression?'
 LOWER_RANGE = 2
-UPPER_RANGE = 20
-START_SEGMENT = 5  # lower bound on the length of an arithmetic progression
-END_SEGMENT = 10  # upper bound on the length of an arithmetic progression
+UPPER_RANGE = 50
+START_SEGMENT = 5  # lower bound
+END_SEGMENT = 10  # upper bound
 
 
 def generate_progression(start, finish, step):
