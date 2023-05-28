@@ -1,19 +1,31 @@
 from random import randint, choice
 
-DESCRIPTION = 'What is the result of the expression?'
-LOWER_RANGE_LIMIT = 1
-UPPER_RANGE_LIMIT = 50
+
+GAME_RULES = 'What is the result of the expression?'
+OPERATORS = ("+", "-", "*")
+MIN_RANDOM_NUMBER = 0
+MAX_RANDOM_NUMBER = 50
 
 
-def get_game_data():
-    first_random_number = randint(LOWER_RANGE_LIMIT, UPPER_RANGE_LIMIT)
-    second_random_number = randint(LOWER_RANGE_LIMIT, UPPER_RANGE_LIMIT)
-    OPERATORS = choice(('-', '+', '*'))
-    question = f'{first_random_number} {OPERATORS} {second_random_number}'
-    if '-' in OPERATORS:
-        answer = first_random_number - second_random_number
-    elif '+' in OPERATORS:
-        answer = first_random_number + second_random_number
-    elif '*' in OPERATORS:
-        answer = first_random_number * second_random_number
-    return question, str(answer)
+def generate_random_number():
+    number = randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
+    return number
+
+
+def calculate_expression(number1, number2, operator):
+    match operator:
+        case "+":
+            return number1 + number2
+        case "-":
+            return number1 - number2
+        case "*":
+            return number1 * number2
+
+
+def make_task():
+    number1 = generate_random_number()
+    number2 = generate_random_number()
+    operator = choice(OPERATORS)
+    answer = calculate_expression(number1, number2, operator)
+    question = f'{number1} {operator} {number2}'
+    return (question, answer)
