@@ -1,11 +1,23 @@
 from random import randint
 
-DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
-LOWER_RANGE_LIMIT = 1
-UPPER_RANGE_LIMIT = 50
+
+GAME_RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
+MIN_RANDOM_NUMBER = 1
+MAX_RANDOM_NUMBER = 50
 
 
-def get_game_data():
-    question = randint(LOWER_RANGE_LIMIT, UPPER_RANGE_LIMIT)
-    answer = 'yes' if question % 2 == 0 else 'no'
-    return question, answer
+def generate_random_number():
+    return randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
+
+
+def make_task():
+    number = generate_random_number()
+    question = number
+    answer = get_correct_answer(number)
+    return (question, answer)
+
+
+def get_correct_answer(number):
+    if number % 2 == 0:
+        return "yes"
+    return "no"
