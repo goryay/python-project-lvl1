@@ -18,6 +18,4 @@ def start_game(game_module):
                 f"'{user_response}' is wrong answer ;(. "
                 f"Correct answer was '{answer}'. "
                 f"Let's try again, {name}!")
-            return None
     print(f'Congratulations, {name}!')
-    return None
