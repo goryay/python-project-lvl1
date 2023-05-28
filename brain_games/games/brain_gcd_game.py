@@ -1,14 +1,23 @@
 from random import randint
 import math
 
-DESCRIPTION = 'Find the greatest common divisor of given numbers.'
-LOWER_RANGE_LIMIT = 1
-UPPER_RANGE_LIMIT = 50
+GAME_RULES = 'Find the greatest common divisor of given numbers.'
+MIN_RANDOM_NUMBER = 0
+MAX_RANDOM_NUMBER = 100
 
 
-def get_game_data():
-    first_random_number = randint(LOWER_RANGE_LIMIT, UPPER_RANGE_LIMIT)
-    second_random_number = randint(LOWER_RANGE_LIMIT, UPPER_RANGE_LIMIT)
-    question = f'{first_random_number} {second_random_number}'
-    answer = math.gcd(first_random_number, second_random_number)
-    return question, str(answer)
+def generate_random_number():
+    return randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
+
+
+def make_task():
+    number1 = generate_random_number()
+    number2 = generate_random_number()
+    numbers = f'{number1}' + " " + f'{number2}'
+    question = numbers
+    answer = get_correct_answer(number1, number2)
+    return (question, answer)
+
+
+def get_correct_answer(number1, number2):
+    return math.gcd(number1, number2)
