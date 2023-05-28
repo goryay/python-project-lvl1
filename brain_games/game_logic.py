@@ -11,7 +11,7 @@ def generate_wrong_message(user_answer, correct_answer, user_name):
     print(wrong_answer_msg)
 
 
-def run_game_engine(game):
+def start_game(game):
     answers = 0
     print("Welcome to the Brain Games!")
     user_name = prompt.string('May I have your name? ')
