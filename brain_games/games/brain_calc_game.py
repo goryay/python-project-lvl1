@@ -8,12 +8,12 @@ UPPER_RANGE_LIMIT = 50
 def get_game_data():
     first_random_number = randint(LOWER_RANGE_LIMIT, UPPER_RANGE_LIMIT)
     second_random_number = randint(LOWER_RANGE_LIMIT, UPPER_RANGE_LIMIT)
-    operator = choice(('-', '+', '*'))
+    OPERATORS = choice(('-', '+', '*'))
     question = f'{first_random_number} {operator} {second_random_number}'
-    if '-' in operator:
+    if '-' in OPERATORS:
         answer = first_random_number - second_random_number
-    elif '+' in operator:
+    elif '+' in OPERATORS:
         answer = first_random_number + second_random_number
-    elif '*' in operator:
+    elif '*' in OPERATORS:
         answer = first_random_number * second_random_number
     return question, str(answer)
