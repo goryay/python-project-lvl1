@@ -1,21 +1,38 @@
 from random import randint
 
-DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-LOWER_RANGE_LIMIT = 2
-UPPER_RANGE_LIMIT = 50
+
+GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+MIN_RANDOM_NUMBER = 0
+MAX_RANDOM_NUMBER = 100
+
+
+def generate_random_number():
+    return randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
 
 
 def is_prime(number):
-    divider = 2
-    while number % divider != 0:
-        divider += 1
-    return divider == number
+    k = 0
+    if number <= 1:
+        return False
 
-
-def get_game_data():
-    question = randint(LOWER_RANGE_LIMIT, UPPER_RANGE_LIMIT)
-    if is_prime(question):
-        answer = 'yes'
+    for i in range(2, number // 2 + 1):
+        if (number % i == 0):
+            k = k + 1
+    if (k == 0):
+        return True
     else:
-        answer = 'no'
-    return question, answer
+        return False
+
+
+def make_task():
+    number = generate_random_number()
+    question = number
+    answer = get_correct_answer(number)
+    return (question, answer)
+
+
+def get_correct_answer(number):
+    if is_prime(number):
+        return "yes"
+    else:
+        return "no"
