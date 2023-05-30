@@ -7,7 +7,6 @@ license = "0.1.0"
 readme = "README.md"
 packages = [{include = "brain_games"}]
 repository = "https://github.com/goryay/python-project-lvl1.git"
-classifiers = ["Topic :: Games/Entertainment"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
