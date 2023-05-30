@@ -8,6 +8,7 @@ readme = "README.md"
 packages = [{include = "brain_games"}]
 repository = "https://github.com/goryay/python-project-lvl1.git"
 
+
 [tool.poetry.dependencies]
 python = "^3.10"
 prompt = "^0.4.1"
@@ -16,9 +17,11 @@ prompt = "^0.4.1"
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"
 
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
