@@ -2,7 +2,7 @@
 name = "hexlet-code"
 version = "0.1.0"
 description = "Brain-games is a bundle of math games with command line interface."
-authors = ["goryay iam.goryn@gmail.com"]
+authors = ["Goryaynov Ilya <iam.goryn@gmail.com>"]
 license = "0.1.0"
 readme = "README.md"
 packages = [{include = "brain_games"}]
