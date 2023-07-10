@@ -14,14 +14,14 @@ def generate_random_number():
 
 def calculate_expression(number1, number2, operator):
     match operator:
-        case "+":
-            return number1 + number2
-        case "-":
-            return number1 - number2
+	case "+":
+		return number1 + number2
+	case "-":
+		return number1 - number2
 	case "*":
-            return number1 * number2
+		return number1 * number2
 	case _:
-	    return f'Invalid input'
+		return f'Invalid input'
 
 
 def make_task():
