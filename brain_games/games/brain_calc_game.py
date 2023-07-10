@@ -21,7 +21,7 @@ def calculate_expression(number1, number2, operator):
 	case "*":
             return number1 * number2
 	case _:
-	    print('Invalid input')
+	    return f'Invalid input'
 
 
 def make_task():
