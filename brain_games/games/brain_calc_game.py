@@ -20,6 +20,8 @@ def calculate_expression(number1, number2, operator):
             return number1 - number2
         case "*":
             return number1 * number2
+	case _:
+	    print('Invalid input')
 
 
 def make_task():
