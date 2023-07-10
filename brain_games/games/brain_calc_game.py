@@ -13,15 +13,15 @@ def generate_random_number():
 
 
 def calculate_expression(number1, number2, operator):
-    match operator:
-	case "+":
-		return number1 + number2
-	case "-":
-		return number1 - number2
-	case "*":
-		return number1 * number2
-	case _:
-		return f'Invalid input'
+	match operator:
+		case "+":
+			return number1 + number2
+		case "-":
+			return number1 - number2
+		case "*":
+			return number1 * number2
+		case _:
+			return f'Invalid input'
 
 
 def make_task():
