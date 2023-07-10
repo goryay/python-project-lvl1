@@ -7,6 +7,6 @@ MAX_RANDOM_NUMBER = 50
 
 
 def make_task():
-    question = randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
+    question = randint(MAX_RANDOM_NUMBER, MIN_RANDOM_NUMBER)
     answer = 'yes' if question % 2 == 0 else 'no'
-    return question, answer	
+    return question, answer
